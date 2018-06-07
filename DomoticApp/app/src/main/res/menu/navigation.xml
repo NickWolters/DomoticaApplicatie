@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_lightbulb"
+        android:icon="@drawable/lightbulb"
+        android:title="@string/title_lights" />
+
+    <item
+        android:id="@+id/navigation_ventilator"
+        android:icon="@drawable/ac"
+        android:title="@string/title_ventilator" />
+
+    <item
+        android:id="@+id/navigation_weerstation"
+        android:icon="@drawable/sun"
+        android:title="@string/title_weerstation" />
+
+</menu>

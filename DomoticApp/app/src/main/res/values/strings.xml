@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DomoticApp</string>
+    <string name="title_lights">Lichten</string>
+    <string name="title_ventilator">Ventilator</string>
+    <string name="title_weerstation">Weerstation</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fan_speed">Fan speed</string>
+
+
+</resources>

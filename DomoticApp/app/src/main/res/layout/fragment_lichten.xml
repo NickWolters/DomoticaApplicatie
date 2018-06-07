@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LichtenFragment">
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="250dp"
+        android:theme="@style/SeekBarRedLight"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/redLedButton"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/redLedButton" />
+
+    <ImageButton
+        android:id="@+id/blueLedButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/White"
+        android:onClick="ledClickBlue"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/led_blue"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_below="@+id/redLedButton"
+        android:layout_alignLeft="@+id/redLedButton"
+        android:layout_alignStart="@+id/redLedButton"
+        android:layout_marginTop="16dp" />
+
+    <ImageButton
+        android:id="@+id/redLedButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/White"
+        android:onClick="ledClickRed"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/led_red"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="OnClick" />
+
+    <ImageButton
+        android:id="@+id/greenLedButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/White"
+        android:onClick="ledClickGreen"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/led_green"
+        android:layout_below="@+id/blueLedButton"
+        android:layout_alignLeft="@+id/blueLedButton"
+        android:layout_alignStart="@+id/blueLedButton"
+        android:layout_marginTop="16dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/SeekBarBlueLight"
+        android:theme="@style/SeekBarBlueLight"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_alignTop="@+id/blueLedButton"
+        android:layout_alignLeft="@+id/seekBar2"
+        android:layout_alignStart="@+id/seekBar2" />
+
+    <SeekBar
+        android:id="@+id/seekBar3"
+        android:layout_width="250dp"
+        android:theme="@style/SeekBarGreenLight"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_alignTop="@+id/greenLedButton"
+        android:layout_alignLeft="@+id/seekBar"
+        android:layout_alignStart="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/blueLedButton"
+        android:layout_below="@id/greenLedButton"
+        android:layout_marginTop="10dp"
+        android:text="Meest gebruikte kleuren :"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/lichtOpties"
+        android:layout_width="wrap_content"
+        android:layout_height="145dp"
+        android:layout_above="@id/navigation"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:elevation="2dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/greenLedButton"
+        android:layout_marginEnd="30dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/add" />
+
+</RelativeLayout>
