@@ -2,15 +2,12 @@ package com.example.nick.domoticapp;
 
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -34,15 +31,6 @@ public class LichtenFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_lichten, container, false);
         listView = (ListView) view.findViewById(R.id.lichtOpties);
-
-        final FloatingActionButton button = (FloatingActionButton) view.findViewById(R.id.floatingActionButton);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                FragmentManager fm = getFragmentManager();
-                LedValuesDialogFragment dialogFragment = new LedValuesDialogFragment ();
-                dialogFragment.show(fm, "Sample Fragment");
-            }
-        });
 
         // Defined Array values to show in ListView
         String[] values = new String[] { "Android List View",
